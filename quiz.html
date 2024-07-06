@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Career Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #d1c4e9, #e1bee7);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #ff6f61;
+            font-size: 2.5em;
+        }
+
+        .question {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question h3 {
+            font-size: 1.5em;
+            color: #ff6f61;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e55b53;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="quizPage">
+        <h1>STEM Career Quiz</h1>
+        <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="question" id="question1">
+                <h3>1. What subject do you enjoy the most?</h3>
+                <label><input type="radio" name="q1" value="software"> Computer Science or Programming</label>
+                <label><input type="radio" name="q1" value="environmental"> Environmental Science</label>
+                <label><input type="radio" name="q1" value="research"> Research and Development</label>
+                <label><input type="radio" name="q1" value="engineering"> Engineering</label>
+                <label><input type="radio" name="q1" value="data"> Data Science</label>
+                <label><input type="radio" name="q1" value="medical"> Medicine or Healthcare</label>
+                <label><input type="radio" name="q1" value="aerospace"> Aerospace Engineering</label>
+                <label><input type="radio" name="q1" value="chemical"> Chemical Engineering</label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="question2" style="display:none;">
+                <h3>2. How do you prefer to solve problems?</h3>
+                <label><input type="radio" name="q2" value="software"> By coding and debugging</label>
+                <label><input type="radio" name="q2" value="environmental"> By researching and analyzing data on environmental issues</label>
+                <label><input type="radio" name="q2" value="research"> Through detailed experiments and analysis</label>
+                <label><input type="radio" name="q2" value="engineering"> By designing and creating solutions</label>
+                <label><input type="radio" name="q2" value="data"> By interpreting complex data sets</label>
+                <label><input type="radio" name="q2" value="medical"> By diagnosing and treating health problems</label>
+                <label><input type="radio" name="q2" value="aerospace"> By working on aircraft or spacecraft</label>
+                <label><input type="radio" name="q2" value="chemical"> By conducting chemical experiments</label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question" id="question3" style="display:none;">
+                <h3>3. What type of work environment do you thrive in?</h3>
+                <label><input type="radio" name="q3" value="software"> A tech-focused environment with coding tasks</label>
+                <label><input type="radio" name="q3" value="environmental"> An outdoor or research-focused setting</label>
+                <label><input type="radio" name="q3" value="research"> A laboratory or research facility</label>
+                <label><input type="radio" name="q3" value="engineering"> A dynamic environment with hands-on projects</label>
+                <label><input type="radio" name="q3" value="data"> An office with data analysis tasks</label>
+                <label><input type="radio" name="q3" value="medical"> A healthcare setting or hospital</label>
+                <label><input type="radio" name="q3" value="aerospace"> A specialized aerospace facility</label>
+                <label><input type="radio" name="q3" value="chemical"> A chemistry lab or manufacturing plant</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question" id="question4" style="display:none;">
+                <h3>4. What motivates you the most?</h3>
+                <label><input type="radio" name="q4" value="software"> Creating innovative software solutions</label>
+                <label><input type="radio" name="q4" value="environmental"> Making a difference in environmental conservation</label>
+                <label><input type="radio" name="q4" value="research"> Contributing to new discoveries in science</label>
+                <label><input type="radio" name="q4" value="engineering"> Designing and building new technologies</label>
+                <label><input type="radio" name="q4" value="data"> Uncovering insights from data</label>
+                <label><input type="radio" name="q4" value="medical"> Improving patient outcomes and healthcare</label>
+                <label><input type="radio" name="q4" value="aerospace"> Exploring and advancing space technology</label>
+                <label><input type="radio" name="q4" value="chemical"> Developing new chemical products and solutions</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question" id="question5" style="display:none;">
+                <h3>5. What type of team collaboration do you prefer?</h3>
+                <label><input type="radio" name="q5" value="software"> Working in a tech team</label>
+                <label><input type="radio" name="q5" value="environmental"> Collaborating on environmental projects</label>
+                <label><input type="radio" name="q5" value="research"> Partnering on research studies</label>
+                <label><input type="radio" name="q5" value="engineering"> Working with engineers on projects</label>
+                <label><input type="radio" name="q5" value="data"> Teaming up with data analysts</label>
+                <label><input type="radio" name="q5" value="medical"> Coordinating with healthcare teams</label>
+                <label><input type="radio" name="q5" value="aerospace"> Collaborating on aerospace missions</label>
+                <label><input type="radio" name="q5" value="chemical"> Working with chemists and engineers</label>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question" id="question6" style="display:none;">
+                <h3>6. What kind of projects do you enjoy?</h3>
+                <label><input type="radio" name="q6" value="software"> Software development and coding</label>
+                <label><input type="radio" name="q6" value="environmental"> Environmental conservation and sustainability</label>
+                <label><input type="radio" name="q6" value="research"> Scientific research and development</label>
+                <label><input type="radio" name="q6" value="engineering"> Engineering design and construction</label>
+                <label><input type="radio" name="q6" value="data"> Data analysis and data-driven projects</label>
+                <label><input type="radio" name="q6" value="medical"> Medical research and patient care</label>
+                <label><input type="radio" name="q6" value="aerospace"> Aerospace technology and missions</label>
+                <label><input type="radio" name="q6" value="chemical"> Chemical innovation and production</label>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question" id="question7" style="display:none;">
+                <h3>7. What type of problem-solving approach do you prefer?</h3>
+                <label><input type="radio" name="q7" value="software"> Logical and algorithmic</label>
+                <label><input type="radio" name="q7" value="environmental"> Analytical and data-driven</label>
+                <label><input type="radio" name="q7" value="research"> Experimental and investigative</label>
+                <label><input type="radio" name="q7" value="engineering"> Creative and practical</label>
+                <label><input type="radio" name="q7" value="data"> Statistical and pattern-based</label>
+                <label><input type="radio" name="q7" value="medical"> Diagnostic and patient-focused</label>
+                <label><input type="radio" name="q7" value="aerospace"> Technical and precision-oriented</label>
+                <label><input type="radio" name="q7" value="chemical"> Process-oriented and experimental</label>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question" id="question8" style="display:none;">
+                <h3>8. How do you feel about working with technology?</h3>
+                <label><input type="radio" name="q8" value="software"> Excited and motivated</label>
+                <label><input type="radio" name="q8" value="environmental"> Interested but not passionate</label>
+                <label><input type="radio" name="q8" value="research"> Neutral, prefer other fields</label>
+                <label><input type="radio" name="q8" value="engineering"> Enthusiastic and eager</label>
+                <label><input type="radio" name="q8" value="data"> Comfortable and focused</label>
+                <label><input type="radio" name="q8" value="medical"> Indifferent, not a primary interest</label>
+                <label><input type="radio" name="q8" value="aerospace"> Curious but not passionate</label>
+                <label><input type="radio" name="q8" value="chemical"> Interested and engaged</label>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question" id="question9" style="display:none;">
+                <h3>9. What kind of impact do you want to make?</h3>
+                <label><input type="radio" name="q9" value="software"> Technological advancements</label>
+                <label><input type="radio" name="q9" value="environmental"> Environmental improvements</label>
+                <label><input type="radio" name="q9" value="research"> Scientific discoveries</label>
+                <label><input type="radio" name="q9" value="engineering"> Innovative engineering solutions</label>
+                <label><input type="radio" name="q9" value="data"> Data-driven decisions</label>
+                <label><input type="radio" name="q9" value="medical"> Better healthcare outcomes</label>
+                <label><input type="radio" name="q9" value="aerospace"> Space exploration achievements</label>
+                <label><input type="radio" name="q9" value="chemical"> New chemical products</label>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question" id="question10" style="display:none;">
+                <h3>10. How do you prefer to learn new skills?</h3>
+                <label><input type="radio" name="q10" value="software"> Through coding and programming challenges</label>
+                <label><input type="radio" name="q10" value="environmental"> By participating in environmental projects</label>
+                <label><input type="radio" name="q10" value="research"> Through hands-on scientific experiments</label>
+                <label><input type="radio" name="q10" value="engineering"> By building and designing practical projects</label>
+                <label><input type="radio" name="q10" value="data"> Through data analysis and statistics</label>
+                <label><input type="radio" name="q10" value="medical"> By working with medical professionals</label>
+                <label><input type="radio" name="q10" value="aerospace"> Through aerospace engineering projects</label>
+                <label><input type="radio" name="q10" value="chemical"> By conducting chemical research and experiments</label>
+            </div>
+
+            <button type="button" onclick="submitQuiz()">Submit</button>
+        </form>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>

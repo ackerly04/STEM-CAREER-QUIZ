@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #e1bee7, #d1c4e9);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #ff6f61;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            font-size: 1.5em;
+            color: #555;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .result p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        button {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #e55b53;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="result">
+        <h1>Your Best Career Fit is:</h1>
+        <div class="result">
+            <p id="careerName"></p>
+            <p id="careerDescription"></p>
+        </div>
+        <button onclick="window.location.href='quiz.html'">Take the Quiz Again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
