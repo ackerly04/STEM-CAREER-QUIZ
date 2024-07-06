@@ -1,14 +1,14 @@
 const questions = [
-  { id: 'question1', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question2', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question3', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question4', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question5', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question6', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question7', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question8', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question9', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } },
-  { id: 'question10', options: { software: 0, environmental: 0, research: 0, engineering: 0, data: 0, medical: 0, aerospace: 0, chemical: 0 } }
+  { id: 'question1', options: { software: 2, environmental: 1, research: 1, engineering: 1, data: 1, medical: 0, aerospace: 0, chemical: 0 } },
+  { id: 'question2', options: { software: 0, environmental: 2, research: 1, engineering: 0, data: 1, medical: 0, aerospace: 0, chemical: 1 } },
+  { id: 'question3', options: { software: 1, environmental: 0, research: 2, engineering: 1, data: 0, medical: 0, aerospace: 0, chemical: 1 } },
+  { id: 'question4', options: { software: 0, environmental: 1, research: 1, engineering: 2, data: 1, medical: 0, aerospace: 1, chemical: 0 } },
+  { id: 'question5', options: { software: 1, environmental: 0, research: 1, engineering: 0, data: 2, medical: 1, aerospace: 0, chemical: 0 } },
+  { id: 'question6', options: { software: 1, environmental: 0, research: 1, engineering: 1, data: 0, medical: 2, aerospace: 0, chemical: 0 } },
+  { id: 'question7', options: { software: 0, environmental: 1, research: 1, engineering: 1, data: 0, medical: 1, aerospace: 1, chemical: 0 } },
+  { id: 'question8', options: { software: 0, environmental: 2, research: 0, engineering: 1, data: 1, medical: 0, aerospace: 0, chemical: 1 } },
+  { id: 'question9', options: { software: 1, environmental: 1, research: 1, engineering: 1, data: 1, medical: 0, aerospace: 0, chemical: 0 } },
+  { id: 'question10', options: { software: 0, environmental: 1, research: 1, engineering: 2, data: 1, medical: 1, aerospace: 0, chemical: 0 } }
 ];
 
 function submitQuiz() {
@@ -17,7 +17,7 @@ function submitQuiz() {
   questions.forEach(question => {
       const selectedOption = document.querySelector(`input[name="${question.id}"]:checked`);
       if (selectedOption) {
-          scores[selectedOption.value]++;
+          scores[selectedOption.value] += question.options[selectedOption.value];
       }
   });
 
